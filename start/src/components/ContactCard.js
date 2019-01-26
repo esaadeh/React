@@ -1,14 +1,19 @@
 import React from 'react';
 
-//props passes a props object with each <ContactCard /> in App.js  See Below
+//props passes a props object with each <ContactCard /> in App.js  See bottom
 function ContactCard(props) {
     console.log(props);
     return (
         <div className="contact-card">
-            <img src={props.imgUrl} />
+            {/* <img src={props.imgUrl} />
             <h3>{props.name}</h3>
             <p>Phone: {props.phone}</p>
-            <p>Email: {props.email}</p>
+            <p>Email: {props.email}</p> */}
+
+            <img src={props.contact.imgUrl} />
+            <h3>{props.contact.name}</h3>
+            <p>Phone: {props.contact.phone}</p>
+            <p>Email: {props.contact.email}</p>
         </div>
     )
 }
@@ -16,7 +21,9 @@ function ContactCard(props) {
 
 export default ContactCard;
 
+
 // props objects being passed with each Card
+
 // {
 // imgUrl: "http://placekitten.com/300/200"
 // email: "mr.whiskaz@catnap.meow"

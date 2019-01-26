@@ -15,28 +15,36 @@ class App extends Component {
         {/* <Header /> */}
         {/* <MainContent /> */}
         {<ContactCard
-          imgUrl="http://placekitten.com/300/200"
-          name="Mr. Whiskerson"
-          phone="(212) 555-1234"
-          email="mr.whiskaz@catnap.meow"
+          // imgUrl="http://placekitten.com/300/200"
+          // name="Mr. Whiskerson"
+          // phone="(212) 555-1234"
+          // email="mr.whiskaz@catnap.meow"
+
+          contact={{imgUrl: "http://placekitten.com/300/200", name: "Mr. Whiskerson", phone: "(212) 555-1234", email: "mr.whiskaz@catnap.meow"}}
         />}
         {<ContactCard
-          imgUrl="http://placekitten.com/400/200"
-          name="Mr. Two"
-          phone="(212) 555-1235"
-          email="mr.two@catnap.meow"
+          // imgUrl="http://placekitten.com/400/200"
+          // name="Mr. Two"
+          // phone="(212) 555-1235"
+          // email="mr.two@catnap.meow"
+
+          contact={{imgUrl: "http://placekitten.com/400/200", name: "Mr. Two", phone: "(212) 555-1235", email: "mr.two@catnap.meow"}}
         />}
         {<ContactCard
-          imgUrl="http://placekitten.com/400/300"
-          name="Mr. Three"
-          phone="(212) 555-1236"
-          email="mr.three@catnap.meow"
+          // imgUrl="http://placekitten.com/400/300"
+          // name="Mr. Three"
+          // phone="(212) 555-1236"
+          // email="mr.three@catnap.meow"
+
+          contact={{imgUrl: "http://placekitten.com/400/300", name: "Mr. Three", phone: "(212) 555-1236", email: "mr.whiskaz@catnap.meow"}}
         />}
         {<ContactCard
-          imgUrl="http://placekitten.com/200/100"
-          name="Mr. Four"
-          phone="(212) 555-1237"
-          email="mr.four@catnap.meow"
+          // imgUrl="http://placekitten.com/200/100"
+          // name="Mr. Four"
+          // phone="(212) 555-1237"
+          // email="mr.four@catnap.meow"
+
+          contact={{imgUrl: "http://placekitten.com/200/100", name: "Mr. Four", phone: "(212) 555-1237", email: "mr.four@catnap.meow"}}
         />}
         {/* <ToDo /> */}
         {/* <Footer /> */}
