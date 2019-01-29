@@ -1,6 +1,7 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
-import todosData from './todosData';
+import todosData from '../todosData.js';
+
 
 function ToDo() {
 
@@ -9,7 +10,7 @@ function ToDo() {
     // Going from an array of objects above to an array of toDoItem below
 
     const toDoItemArray = todosData.map(item => <ToDoItem key={item.id} item={item} />)
-
+ 
     return (
         <div className="todo-list">
 
