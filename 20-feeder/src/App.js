@@ -1,38 +1,42 @@
 import React, { Component } from 'react';
 
-
 class App extends Component {
   constructor() {
     super()
-    // state being used to check if API call is complete
     this.state = {
-      unreadMessages: [
-        "Message one",
-        "Message two"
-      ]
+      firstName: ""
     }
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  // &&  used in conditionals to check truthiness of both sides of an if statement   if(a && b)
-  // What's actually happening is if a is true, the code just sends back b. This is because b is the deciding factor. But, if a is false, it returns false. This is bacause there's no need to check b.
+  // Custom handleChange method to change state whenever the onChange is fired in the form below
+  handleChange(event) {
+    // this.setState({
+    // taking that event object and accessing the target(that which fired the event: input box) and grabbig its value
+    // firstName: event.target.value,
+    // lastName: event.target.value
+
+    //for text based input boxes
+    // [event.target.name]: event.target.value
+    //or
+    const { name, value } = event.target
+    this.setState({
+      [name]: value
+    })
+  }
 
   render() {
+
     return (
-      <div className="App">
-        {/* <h2>You have {this.state.unreadMessages.length} unread messages.</h2> */}
-
-        {/* {
-          this.state.unreadMessages.length > 0 ?
-            <h2>You have {this.state.unreadMessages.length} unread messages.</h2> :
-            null
-        } */}
-
-        {
-          this.state.unreadMessages.length > 0 &&
-            <h2>You have {this.state.unreadMessages.length} unread messages.</h2>
-        }
-
-      </div>
+      <form>
+        {/* onChange listener calling handleChange method whenever the text input box changes */}
+        {/* event object is sent whenver onChange is fired at every character chane */}
+        {/* value if above an beyond...to be sure that it's state that's directing whats being displayed to the user and not the other way around.  name is for the new event targeting in state above */}
+        <input type="text" value={this.state.firstName} name="firstName" placeholder="First Name" onChange={this.handleChange} />
+        <input type="text" value={this.state.lastName} name="lastName" placeholder="Last Name" onChange={this.handleChange} />
+        {/* Displaying the state.firstname */}
+        <h1>{this.state.firstName} {this.state.lastName}</h1>
+      </form>
     );
   }
 }
