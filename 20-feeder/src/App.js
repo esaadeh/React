@@ -1,30 +1,37 @@
 import React, { Component } from 'react';
-import './App.css';
-import ToDo from './components/ToDo';
-
-
-function handleClick() {
-  console.log("Click!");
-}
-
-// function handleMouseOver() {
-
-// }
 
 
 class App extends Component {
+  constructor() {
+    super()
+    // state being used to check if API call is complete
+    this.state = {
+      unreadMessages: [
+        "Message one",
+        "Message two"
+      ]
+    }
+  }
+
+  // &&  used in conditionals to check truthiness of both sides of an if statement   if(a && b)
+  // What's actually happening is if a is true, the code just sends back b. This is because b is the deciding factor. But, if a is false, it returns false. This is bacause there's no need to check b.
+
   render() {
     return (
       <div className="App">
-        <ToDo />
-        {/* onMouseOver listener */}
-        <img onMouseOver={() => console.log("Hover!")}
-          src="https://www.fillmurray.com/200/100" alt="required?" />
-        <br />
-        <br />
-        {/* onClick listner */}
-        {/* <button onClick={function () { (console.log("clicked!")) }}>Click me</button> */}
-        <button onClick={handleClick}>Click me</button>
+        {/* <h2>You have {this.state.unreadMessages.length} unread messages.</h2> */}
+
+        {/* {
+          this.state.unreadMessages.length > 0 ?
+            <h2>You have {this.state.unreadMessages.length} unread messages.</h2> :
+            null
+        } */}
+
+        {
+          this.state.unreadMessages.length > 0 &&
+            <h2>You have {this.state.unreadMessages.length} unread messages.</h2>
+        }
+
       </div>
     );
   }
